@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./form.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Sign up form</title>
+
+    </head>
+
+    <body>
+        <script>  
+            function verifyPassword() {  
+              var pw = document.getElementById("Pass").value;  
+              var pw1=document.getElementById("rePass").value;
+              //check empty password field  
+              if(pw == "") {  
+                 document.getElementById("message").innerHTML = "**Fill the password please!";  
+                 return false;  
+              }  
+               
+             //minimum password length validation  
+              if(pw.length < 5) {  
+                 document.getElementById("message").innerHTML = "**Password length must be atleast 5 characters";  
+                 return false;  
+              }  
+              
+            //maximum length of password validation  
+              if(pw.length > 15) {  
+                 document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";  
+                 return false;  
+              } else {  
+                 alert("Password is correct");  
+              }  
+
+              if(pw != pw1)
+              {
+                document.getElementById("message").innerHTML = "**Password doesnot match";  
+              }
+            }  
+</script>
+                 <h1 class="wel" >Welcome!</h1>
+          
+        
+        <div class="Sign">
+            <h1 style="color: rgb(111, 0, 255);" class="si">Sign Up</h1>
+            <form class="form" method="" name="reg_form" onsubmit="return verifyPassword()" >
+            
+                <i class="fa fa-user">
+ 
+                <input type="text" name="Fname" id="First" placeholder="First Name" required ></i>
+                
+                <i class="fa fa-user">
+                <input type="text" name="Lname" id="Lname" required placeholder="Last Name" ></i>
+                
+                <i class="fa fa-envelope">
+
+                <input type="password"class="pass" id="Pass" required placeholder="Password( 5 characters)" ></i>
+                <span id="message"></span>
+                
+                <i class="fa fa-envelope">
+                <input type="password"class="repass" id="rePass" placeholder="Rewrite Password" required ></i>
+                <span id="message"></span>
+                
+                <i class="fa fa-envelope">
+                <input id="Email" name="Email" type="email" required placeholder="Email id:abc@gmail.com" ></i>
+                <br>
+                <p><span><input type="checkbox" required></span>I agree to the <a href="#a">Terms and condition</a></p>
+               
+                <input type="submit" class="but" value="SignUp">
+                <button type="reset" class="but">Reset</button>
+                <hr>
+                <p style="text-align: center;">OR</p>
+                <button type="button" class="but">SignUp with Google</button>
+                <h2>Already have an Account? <a href="#a">SignIn</a></h2>
+                
+           </form>
+        </div>
+
+        
+    </body>
+</html>

@@ -1,0 +1,80 @@
+body
+{
+    
+    margin: 0;
+    padding: 0;
+    background-image: url(./fly-d-mT7lXZPjk7U-unsplash.jpg);
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.si{
+    position: relative;
+}
+.si::before{
+content: '';
+position: absolute;
+
+bottom: 0;
+height: 3px;
+width: 25px;
+background: rgb(111, 0, 255) ;
+
+}
+
+.Sign
+{
+   margin: 7% auto;
+   width: 400px;
+   background-color:whitesmoke;
+   border: 2px solid black;
+   color: black;
+    text-align: center;
+    padding: 40px 30px;
+    position: relative;
+
+}
+.form
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    width: 100%;
+    align-content: left;
+
+}
+
+.but
+{
+    width: 100px;
+    align-self: center;
+    padding: 0px;
+    background-color: rgb(111, 0, 255);
+    color: white;
+}
+.but:hover{
+    cursor: pointer;
+}
+input
+{
+    
+    border: none;
+    outline: none;
+    padding: 0 80px;
+    border-bottom: 2px dotted rgba(0,0,0,0.2);
+}
+
+.wel
+{
+    padding: 20px;
+    text-align: center;
+    font-size: 70px;
+    color:white;
+    background-color:black;
+    opacity: 90%;
+    
+}
+
+.wel:hover{
+    cursor: pointer;
+}
